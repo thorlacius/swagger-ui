@@ -43,7 +43,8 @@
     "e2e-selenium": "run-p -r hot-e2e-selenium-server mock-api test-e2e-selenium",
     "open-static": "node -e 'require(\"open\")(\"http://localhost:3002\")'",
     "serve-static": "http-server dist/ -i -a 0.0.0.0 -p 3002",
-    "start": "npm-run-all --parallel serve-static open-static"
+    "start": "npm-run-all --parallel serve-static open-static",
+    "tag-release": "./tag-release.sh"
   },
   "dependencies": {
     "@braintree/sanitize-url": "^2.0.2",
