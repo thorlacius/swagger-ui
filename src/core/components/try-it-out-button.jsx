@@ -25,13 +25,15 @@ export default class TryItOutButton extends React.Component {
         {
           enabled 
             ? <Button
-                className="sui-btn sui-btn--secondary try-out__btn cancel"
+                className="try-out__btn cancel"
+                mod="secondary"
                 onClick={ onCancelClick }
               >
                 Cancel
               </Button>
             : <Button
-                className="sui-btn sui-btn--primary try-out__btn"
+                className="try-out__btn"
+                mod="primary"
                 onClick={ onTryoutClick }
               >
                 Try it out

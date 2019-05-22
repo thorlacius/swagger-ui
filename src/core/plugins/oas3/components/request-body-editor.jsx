@@ -116,11 +116,13 @@ export default class RequestBodyEditor extends PureComponent {
         <div className="body-param-options">
           <div className="body-param-edit">
             {
-              !isExecute ? null
-                         : <Button className={isEditBox ? "btn cancel body-param__example-edit" : "btn edit body-param__example-edit"}
-                                   onClick={this.toggleIsEditBox}>{ isEditBox ? "Cancel" : "Edit"}
-                           </Button>
-
+              !isExecute
+                ? null
+                : <Button
+                    mod="tertiary-lt"
+                    className={isEditBox ? "cancel body-param__example-edit" : "edit body-param__example-edit"}
+                    onClick={this.toggleIsEditBox}>{ isEditBox ? "Cancel" : "Edit"}
+                  </Button>
             }
             { userDidModify &&
               <Button className="btn ml3" onClick={() => { this.resetValueToSample(mediaType) }}>Reset</Button>
